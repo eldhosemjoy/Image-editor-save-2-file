@@ -151,6 +151,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' AND isset($_FILES['image'])) {
 		<?php if(isset($msg)): ?>
 			<p class='alert'><?php echo $msg ?></p>
 		<?php endif ?>
+        <?php
+		if (isset($_POST['folder'])) {
+
+		if(empty($_POST['folder'])) {
+		   echo '<p class="alert">Please Select a Folder Destination</p>';
+		}}
+		?>
 
 <div>
 <form action="" method="post" enctype="multipart/form-data" class="upload">

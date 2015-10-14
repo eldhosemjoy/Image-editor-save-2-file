@@ -20,6 +20,8 @@ function resize($width, $height){
 	
 	/* new file name */
 	$path = $_POST['folder'] . "/" .$width.'_'.$_FILES['image']['name'];
+	
+
 //	$path = 'uploads/'.$width.'_'.$_FILES['image']['name'];
 //	$path = 'uploads/'.$width.'x'.$height.'_'.$_FILES['image']['name'];
 	
@@ -55,5 +57,6 @@ function resize($width, $height){
 	/* cleanup memory */
 	imagedestroy($imgupload);
 	imagedestroy($tmp);
+
 }
 ?>
