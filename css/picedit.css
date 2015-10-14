@@ -33,8 +33,7 @@
 	transition: opacity 200ms ease-out;
 }
 .picedit_nav_box:hover, .picedit_nav_box.active {
-	opacity: 0.8;
-	border-bottom: 2px #000 groove;
+	opacity: 1;
 }
 .picedit_control {
     padding: 0 0.25em;
@@ -51,7 +50,7 @@
 .picedit_control:hover, .picedit_element.active > .picedit_control, .picedit_control.active {
 	opacity: 1;
 	text-shadow: 0px 0px 0px #fff, 0px 0px 0px #ccc, 0px 2px 0px #000;
-	color: transparent;
+	/*color: transparent;*/
 }
 .picedit_gray_gradient {
 	width:100%;
@@ -65,6 +64,19 @@
     background: -ms-linear-gradient(top, #62c462 0%,#51a351 100%) !important;
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0) !important;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+.picedit_gray_gradient:hover {
+	box-shadow: 0 1px 4px #333;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 .picedit_pos_elements {}
 .picedit_nav_elements {
@@ -123,10 +135,10 @@
 }
 .picedit_tooltip {}
 .picedit_tooltip.picedit_elm_1:after, .picedit_tooltip.picedit_elm_1:before {
-    left: 96%;
+    left: 94%;
 }
 .picedit_tooltip.picedit_elm_2:after, .picedit_tooltip.picedit_elm_2:before {
-    left: 96%;
+    left: 94%;
 }
 .picedit_tooltip.picedit_elm_3:after, .picedit_tooltip.picedit_elm_3:before {
     left: 12%;
@@ -134,10 +146,10 @@
 .picedit_tooltip {
 	position: relative;
 	background: #ffffff;
-	border: 1px solid #949494;
+	border: 1px solid #333;
 	padding: 9px 4px 7px;
-	-webkit-box-shadow: 0em 0em 0.2em 0.1em rgba(95, 95, 95, 0.55);
-	box-shadow: 0em 0em 0.2em 0.1em rgba(95, 95, 95, 0.55);
+	-webkit-box-shadow: 0px 10px 5px -5px #ccc;
+	box-shadow: 0px 10px 5px -5px #ccc;
 	white-space: nowrap;
 }
 .picedit_tooltip:after, .picedit_tooltip:before {
@@ -158,8 +170,8 @@
 	margin-left: -8px;
 }
 .picedit_tooltip:before {
-	border-color: rgba(204, 204, 204, 0);
-	border-bottom-color: #cccccc;
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-bottom-color: #000;
 	border-width: 9px;
 	margin-left: -9px;
 }
@@ -170,6 +182,7 @@
     width: 100%;
     height: 100%;
     display: block;
+	margin-top:42px;
 	text-align: center;
 	position: relative;
 	-webkit-transition: all 200ms ease-in-out;
@@ -182,6 +195,7 @@
 	background: #333 none repeat scroll 0% 0%;
 	opacity: 0.75;
 	color: #333;
+	box-shadow:;
 	-webkit-transition: all 200ms ease-in-out;
 	-moz-transition: all 200ms ease-in-out;
 	-ms-transition: all 200ms ease-in-out;
@@ -201,7 +215,7 @@
 .picedit_action_btns .center {
     text-align: center;
     font-size: 0.3em;
-    color: #CACACA;
+    color: #62C462;
     position: absolute;
     bottom: -0.5em;
     left: 0;
@@ -215,13 +229,13 @@
 }
 .picedit_action_btns {
 	font-size: 3em;
-	color: #ddd;
+	color: #62C462;
 	width: 50%;
 	height: 15%;
 	display: inline-table;
 	margin: 20% auto 0% auto;
+	top: -40px;
 	position: relative;
-	text-shadow: 0px 1px 0px #403e3c;
 	leter-spacing:1px;
 	opacity: 0;
 	z-index: 4;
@@ -250,17 +264,14 @@
     position: absolute;
     padding: 1.4em 2.5em 1em 1em;
     bottom: -100px;
-    border: 1px solid #eee;
 	margin:0 auto;
     z-index: 180;
-    background-color: #F7F5D4;
+    background-color: #cdcdcd;
     opacity: 0.8;
 	color:#333;
 	text-align:center;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    border-radius: 4px 4px 4px 4px;
-    -webkit-box-shadow: 0 0 4px 1px #D8D8D8;
-    box-shadow: 0 0 4px 1px #D8D8D8;
+    -webkit-box-shadow: 0px -1px 2px #333;
+    box-shadow: 0px -1px 2px #333;
 	-webkit-transition: bottom 200ms ease-out;
 	-moz-transition: bottom 200ms ease-out;
 	-ms-transition: bottom 200ms ease-out;
