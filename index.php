@@ -22,12 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' AND isset($_FILES['image'])) {
 			}
 
 		} else {
-			$msg = 'Unsupported file';
+			$msg = 'Plese select an Image:</br>( jpeg | jpg | png | gif )';
 		}
-	} else{
+	} else {
 		$msg = 'Please upload image smaller than 350KB';
 	}
 }
+error_reporting( error_reporting() & ~E_NOTICE );
 ?>
 <!doctype html>
 <html>
@@ -153,10 +154,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' AND isset($_FILES['image'])) {
 		<?php endif ?>
         <?php
 		if (isset($_POST['folder'])) {
-
-		if(empty($_POST['folder'])) {
-		   echo '<p class="alert">Please Select a Folder Destination</p>';
-		}}
+			if(empty($_POST['folder'])) {
+		    	echo '<div class="alert">Please Select a Folder Destination</div>';
+			}
+		}
 		?>
 
 <div>

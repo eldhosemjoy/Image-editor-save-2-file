@@ -1,13 +1,4 @@
 <?php
-/**
- * Image resize while uploading
-**/
- 
-/**
- * Image resize
- * @param int $width
- * @param int $height
-**/
 function resize($width, $height){
 	/* Get original image x y*/
 	list($w, $h) = getimagesize($_FILES['image']['tmp_name']);
@@ -20,7 +11,6 @@ function resize($width, $height){
 	
 	/* new file name */
 	$path = $_POST['folder'] . "/" .$width.'_'.$_FILES['image']['name'];
-	
 
 //	$path = 'uploads/'.$width.'_'.$_FILES['image']['name'];
 //	$path = 'uploads/'.$width.'x'.$height.'_'.$_FILES['image']['name'];
