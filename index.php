@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' AND isset($_FILES['image'])) {
 }
 error_reporting( error_reporting() & ~E_NOTICE );
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
@@ -151,14 +151,14 @@ error_reporting( error_reporting() & ~E_NOTICE );
 		<h1 style="padding-bottom: 10px; border-bottom: #333 2px groove;">Create Article Images</h1>
 		<?php if(isset($msg)): ?>
 			<p class='alert'><?php echo $msg ?></p>
-		<?php endif ?>
         <?php
 		if (isset($_POST['folder'])) {
 			if(empty($_POST['folder'])) {
-		    	echo '<div class="alert">Please Select a Folder Destination</div>';
+		    	echo '<p class="alert">Please Select a Folder Destination</p>';
 			}
 		}
 		?>
+		<?php endif ?>
 
 <div>
 <form action="" method="post" enctype="multipart/form-data" class="upload">
